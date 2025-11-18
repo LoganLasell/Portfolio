@@ -37,7 +37,7 @@ docker build -t <dockerhubusername>/<code>:<version> <dockerfile> .
 
 Example
 ```bash
-docker run --rm -v -p 5000:5000 llasell/the-bus_website:1.0
+docker run --rm -p 5000:5000 llasell/the-bus_website:1.0
 ```
 Template
 ```bash
