@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Bus</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/styles.css">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-yellow" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="http://127.0.0.1:5000/" class="w3-bar-item w3-button w3-padding-large w3-white" style="height: 51px; overflow: visible;">
+      <img src="{{ url_for('static', filename='thebus.png') }}" alt="Home" style="height: 40px; margin-top: -1px;">
+    </a>
+    <a href="http://127.0.0.1:5000/models" class="w3-bar-item w3-button w3-padding-large w3-white">Features</a>
+    <a href="http://127.0.0.1:5000/about" class="w3-bar-item w3-button w3-padding-large w3-white">About</a>
+    <a href="http://127.0.0.1:5000/contact" class="w3-bar-item w3-button w3-padding-large w3-white">Contact Us</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  </div>
+
+<!-- Header -->
+<header class="text-center text-white" style="background-image: url('static/new-background.jpg'); padding-top: 100px; padding-bottom: 100px; background-size: cover; background-position: center;">
+  <h1 class="mb-4 display-4">TheBus Website</h1>
+  <p class="fs-4">CS 401 Final Project</p>
+  <button id="getLocationBtn" class="btn btn-dark btn-lg mt-3" onclick="getUserLocation()">Find My Bus</button>
+
+  <!-- Digital Clock Embed -->
+  <div class="mt-4">
+    <script src="https://cdn.logwork.com/widget/digital.js"></script>
+    <a href="https://logwork.com/current-time-in-honolulu-united-states-hawaii" 
+       class="digital-clock" 
+       data-style="style2" 
+       data-size="393" 
+       data-timezone="Pacific/Honolulu" 
+       data-language="en" 
+       data-format="12" 
+       data-date="1" 
+       data-seconds="1">
+      Current Time (HST)
+    </a>
+  </div>
+</header>
+
+
+
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/buspic1.jpg" class="d-block w-100" style="height: 700px; object-fit: cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/buspic4.jpg" class="d-block w-100" style="height: 700px; object-fit: cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/buspic5.jpg" class="d-block w-100" style="height: 700px; object-fit: cover;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/buspic6.jpg" class="d-block w-100" style="height: 700px; object-fit: cover;" alt="...">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<style>
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust position to ensure centering */
+  z-index: 1; /* Ensure the buttons are above the images */
+}
+</style>
+
+<!-- Footer -->
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <p class="col-md-4 mb-0 text-body-secondary">© TheBus</p>
+
+  <a href="http://127.0.0.1:5000/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <img src="static/thebus.png" alt="TheBus Logo" style="height: 40px;">
+  </a>
+
+  <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="http://127.0.0.1:5000/models" class="nav-link px-2 text-body-secondary">Features</a></li>
+    <li class="nav-item"><a href="http://127.0.0.1:5000/about" class="nav-link px-2 text-body-secondary">About</a></li>
+    <li class="nav-item"><a href="http://127.0.0.1:5000/contact" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+  </ul>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+document.getElementById("getLocationBtn").addEventListener("click", function () {
+        // Check if the browser supports Geolocation
+        if (navigator.geolocation) {
+          navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
+    if (result.state == 'granted') {
+      if (confirm) {
+
+        navigator.geolocation.getCurrentPosition(getUserLocation, showError);
+      }
+    } else if (result.state === 'prompt') {
+      // Trigger the real location prompt
+      navigator.geolocation.getCurrentPosition(getUserLocation, showError);
+    } else {
+      document.getElementById("locationOutput").textContent = "Location permission is currently blocked. Please reset it in your browser settings.";
+    }
+  });
+
+}
+})
+
+document.getElementById("liveBusTracker").addEventListener("click", function () {
+        // Check if the browser supports Geolocation
+        if (navigator.geolocation) {
+          navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
+    if (result.state == 'granted') {
+      if (confirm) {
+
+        navigator.geolocation.getCurrentPosition(getUserLocation, showError);
+      }
+    } else if (result.state === 'prompt') {
+      // Trigger the real location prompt
+      navigator.geolocation.getCurrentPosition(getUserLocation, showError);
+    } else {
+      document.getElementById("locationOutput").textContent = "Location permission is currently blocked. Please reset it in your browser settings.";
+    }
+  });
+}
+
+})
+    function getUserLocation(position) {
+
+            let userLat = position.coords.latitude;
+            let userLon = position.coords.longitude;
+            localStorage.setItem('userLat', userLat);
+            localStorage.setItem('userLon', userLon);
+            window.location.href = '/map'; // Redirect to map page
+      }
+
+
+
+function showError(error){
+  switch (error.code) {
+            case error.PERMISSION_DENIED:
+                document.getElementById("location").innerHTML = "You denied the request for location. Please enable it in your browser settings.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                document.getElementById("location").innerHTML = "Location information is unavailable.";
+                break;
+            case error.TIMEOUT:
+                document.getElementById("location").innerHTML = "The request to get your location timed out.";
+                break;
+            case error.UNKNOWN_ERROR:
+                document.getElementById("location").innerHTML = "An unknown error occurred.";
+                break;
+        }
+    }
+
+    document.getElementById("learnModels").addEventListener("click", function () {
+      getModels()
+    })
+
+    function getModels(){
+        window.location.href = '/models';
+      }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

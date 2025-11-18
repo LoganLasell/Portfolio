@@ -1,0 +1,118 @@
+/* Make the sidebar with the dropdown always visible and side-by-side */
+#sidebar {
+    z-index: 999;  /* Ensure it stays above the map */
+    background-color: rgba(255, 255, 255, 0.8);  /* Slight transparency */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust the dropdown width */
+#busStopSelect {
+    width: 200px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+
+/* Container to hold both dropdown and map */
+/* .container {
+    display: flex;
+    justify-content: space-between; /* space between the dropdown and the map */
+    /* align-items: center; /* center vertically if needed */
+    /* width: 100%;
+}
+
+
+/* Map styling */
+#map {
+    height: 800px;
+    width: 100%; /* Adjust the width to take up less space */
+    border: 2px solid black;
+}
+
+#busTrackerTitle{
+    border-bottom: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0px;
+    font-size: 45px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    border-top: 5px solid black;
+    border-bottom: 3px solid black;
+    padding: 5px;
+    
+    
+}
+
+.learn-models{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 2px solid black;
+    
+}
+
+#addressTop{
+    border: 2px solid black;
+    border-radius: 100px;
+    font-size: 60px;
+    font-style: italic;
+}
+
+
+.container-mt-5 {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+
+.searchBar{
+    align-self: center;
+}
+
+#aboutSectionTopHeader{
+    border-top: 5px solid black;
+}
+
+.address-info{
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 30px;
+
+}
+
+#map-Bus{
+    border-top: 5px solid black;
+    border-bottom: 0px;
+}
+
+#maps {
+    height: 800px;
+    width: 70%;
+    border: 2px solid black;
+    position: relative;
+    margin: 0 auto;
+}
+
+#maps .map-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.dropdownAddress{
+    display: flex;
+    background-color: #ffcc00;
+    justify-content: right;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
