@@ -1,4 +1,4 @@
-# Welcome to my Project Portfolio
+# Welcome to my Digital Portfolio
 
 ## Project 1 : TheBus Website
 ### Information --
