@@ -39,30 +39,6 @@ Built for research, reproducibility, and public impact.
 
 ---
 
-## 🛠 Tech Stack
-
-| Tool | Purpose |
-|------|---------|
-| `R` / `tidyverse` | Data wrangling, modeling, reproducibility |
-| `sf`, `terra`     | Geospatial vector and raster analysis |
-| `xgboost`, `DALEX` | Machine learning + explainability |
-| `targets`, `renv` | Pipeline management + reproducibility |
-| `Shiny` / `mapgl` | Interactive exploration dashboard |
-| Docker + GitHub Actions | Optional: reproducible deployment |
-
----
-
-## 🌍 Project Structure
-
-```bash
-📦 Particulate-Load-Index
-├── 📁 data/              # Raw and cleaned datasets
-├── 📁 R/                 # Scripts and modular functions
-├── 📁 notebooks/         # RMarkdown/Quarto analysis notebooks
-├── 📁 dashboard/         # Shiny or Streamlit app (to be developed)
-├── 📁 figures/           # Output plots and maps
-├── 📄 README.md          # You are here
-└── 📄 LICENSE            # MIT
 
 
 
