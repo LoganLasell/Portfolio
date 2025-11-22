@@ -15,7 +15,6 @@ Link to public API from the offical TheBus website: https://hea.thebus.org/api_i
 To begin, you are provided with these files in this GitHub Repostitory. Download them all onto your local device - this includes the Dockerfile, two python files, 2 txt files, 7 html files, and the static folder containing the images on our webiste.
 
 
-![Unknown](https://github.com/user-attachments/assets/fdb25b2b-b803-44d8-bb16-e47aefb3ed5d)
 
 
 Once Docker is up and running, locate your Terminal and enter the commands below based on your username.
@@ -44,7 +43,7 @@ Template
 docker run --rm  -p <port> <dockerhubusername>/<code>:<version> 
 ```
 
-Resulting Output Example (PUT NEW HERE!!)
+Resulting Output Example 
 ```bash
 * Serving Flask app 'routes'
  * Debug mode: on
