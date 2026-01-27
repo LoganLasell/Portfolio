@@ -172,23 +172,7 @@ data = {
 
     
 
-# @app.route('/arrivals', methods=['GET'])
-# def get_user_coords():
-#     API_KEY = "F02CFCAC-3067-45DB-835E-A102C773D6F2"
-#     stop_ID = request.args.get('stop', )  
 
-#     url = f"http://api.thebus.org/arrivalsJSON/?key={API_KEY}&stop={stop_ID}"
-    
-#     try:
-#         response = requests.get(url)
-
-#         data = response.json()
-
-#         data["arrivals"] = [arrival for arrival in data["arrivals"] 
-#                     if float(arrival["latitude"]) != 0 and float(arrival["longitude"]) != 0]
-        
-#     except requests.exceptions.RequestException as e:
-#         return jsonify({'error': f'An error occurred: {str(e)}'}), 500
 
 
 if __name__ == '__main__':
