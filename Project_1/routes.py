@@ -132,7 +132,7 @@ def get_stops():
 
 @app.route('/arrivals', methods=['GET'])
 def get_bus_coords():
-    API_KEY = "F02CFCAC-3067-45DB-835E-A102C773D6F2"
+    API_KEY = ""
     stop_ID = request.args.get('stop', 46)  
 
     url = f"http://api.thebus.org/arrivalsJSON/?key={API_KEY}&stop={stop_ID}"
