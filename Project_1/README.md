@@ -1,5 +1,8 @@
 # Running TheBus Website! 🚌
 Quinn McHenry, Logan Lasell, Ashley Holen
+<img src = "the_bus2.png" alt = 'bus' />
+<img src = "the_bus.png" alt = 'bus2' />
+
 
 For our CS 401 Software Engineering and Design Spring 2025 final project, our group decided to create a web based software application which assists the general public in navigating public transportation systems, specifically TheBus on O’ahu. Our website provides a user-friendly and accessible resource for users to quickly and easily find the bus which is that of their best interest. We have three features of the website - locating the buses nearest to you, finding the buses based on address, and finding the nearest bus stops.
 
@@ -57,3 +60,5 @@ Press CTRL+C to quit
 #
 
 You are all set, enjoy your ride! 
+```
+<img src = "contact.png" />
