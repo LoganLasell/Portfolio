@@ -27,7 +27,7 @@ Once Docker is up and running, locate your Terminal and enter the commands below
 
 Example
 ```bash
-docker build -t llasell/the-bus_website:1.0 -f Dockerfile .
+docker build -t <dockerhubusername>/the-bus_website:1.0 -f Dockerfile .
 ```
 Template
 ```bash
@@ -39,7 +39,7 @@ docker build -t <dockerhubusername>/<code>:<version> <dockerfile> .
 
 Example
 ```bash
-docker run --rm -p 5000:5000 llasell/the-bus_website:1.0
+docker run --rm -p 5000:5000 <dockerhubusername>/the-bus_website:1.0
 ```
 Template
 ```bash
