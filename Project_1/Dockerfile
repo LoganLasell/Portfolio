@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /code/
 
 # Set file permissions (optional but can help debugging in some containers)
-RUN chmod +rx stops_coords.txt routes.py test_routes.py && \
+RUN chmod +rx stops_coords.txt routes.py && \
     chmod -R +rx templates static
 
 # Set environment path (optional, useful if you have CLI tools)
