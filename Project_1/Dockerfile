@@ -8,11 +8,11 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all app files and folders
-COPY stops_coords.txt ./
-COPY README.md ./
-COPY templates/ templates/
-COPY static/ static/
-COPY routes.py test_routes.py ./
+# COPY stops_coords.txt ./
+# COPY README.md ./
+# COPY templates/ templates/
+# COPY static/ static/
+# COPY routes.py test_routes.py ./
 
 # Copies application files into the container
 COPY . /code/
@@ -24,5 +24,7 @@ RUN chmod +rx stops_coords.txt routes.py test_routes.py && \
 # Set environment path (optional, useful if you have CLI tools)
 ENV PATH="/code:$PATH"
 
+EXPOSE 5000
+
 # Default command to run the app
-CMD ["python", "routes.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "routes:app"]
