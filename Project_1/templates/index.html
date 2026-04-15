@@ -45,18 +45,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <button id="getLocationBtn" class="btn btn-dark btn-lg mt-3" onclick="getUserLocation()">Find My Bus</button>
 
   <!-- Digital Clock Embed -->
-  <div class="mt-4">
-    <a href="https://logwork.com/current-time-in-honolulu-united-states-hawaii" 
-       class="digital-clock" 
-       data-style="style2" 
-       data-size="393" 
-       data-timezone="Pacific/Honolulu" 
-       data-language="en" 
-       data-format="12" 
-       data-date="1" 
-       data-seconds="1">
-      Current Time (HST)
-    </a>
+  <div class="mt-4" id="landingClock">
+    <div id="clock" style="font-size: 2rem;"></div>
   </div>
 </header>
 
@@ -127,11 +117,24 @@ function myFunction() {
 }
 
 // Dynamically reloads the clock widget so a same page refresh reinitializes it
-window.addEventListener('load', function() {
-  const script = document.createElement('script');
-  script.src = 'https://cdn.logwork.com/widget/digital.js';
-  document.body.appendChild(script);
-});
+function updateClock() {
+    const now = new Date();
+    const options = {
+      timeZone: 'Pacific/Honolulu',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric'
+    };
+    document.getElementById('clock').textContent = 
+      now.toLocaleString('en-US', options);
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
 
 // Check if the browser supports Geolocation
 document.getElementById("getLocationBtn").addEventListener("click", function () {
@@ -179,13 +182,6 @@ function showError(error){
         }
     }
 
-    document.getElementById("learnModels").addEventListener("click", function () {
-      getModels()
-    });
-
-    function getModels(){
-        window.location.href = '/models';
-      }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
