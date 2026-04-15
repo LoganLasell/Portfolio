@@ -46,7 +46,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   <!-- Digital Clock Embed -->
   <div class="mt-4">
-    <script src="https://cdn.logwork.com/widget/digital.js"></script>
     <a href="https://logwork.com/current-time-in-honolulu-united-states-hawaii" 
        class="digital-clock" 
        data-style="style2" 
@@ -126,45 +125,32 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+// Dynamically reloads the clock widget so a same page refresh reinitializes it
+window.addEventListener('load', function() {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.logwork.com/widget/digital.js';
+  document.body.appendChild(script);
+});
+
+// Check if the browser supports Geolocation
 document.getElementById("getLocationBtn").addEventListener("click", function () {
-        // Check if the browser supports Geolocation
-        if (navigator.geolocation) {
+  if (navigator.geolocation) {
           navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
-    if (result.state == 'granted') {
-      if (confirm) {
-
-        navigator.geolocation.getCurrentPosition(getUserLocation, showError);
+  if (result.state == 'granted') {
+    if (confirm) {
+      navigator.geolocation.getCurrentPosition(getUserLocation, showError);
       }
-    } else if (result.state === 'prompt') {
+  } else if (result.state === 'prompt') {
       // Trigger the real location prompt
       navigator.geolocation.getCurrentPosition(getUserLocation, showError);
-    } else {
+  } else {
       document.getElementById("locationOutput").textContent = "Location permission is currently blocked. Please reset it in your browser settings.";
     }
   });
+  }
+});
 
-}
-})
-
-document.getElementById("liveBusTracker").addEventListener("click", function () {
-        // Check if the browser supports Geolocation
-        if (navigator.geolocation) {
-          navigator.permissions.query({ name: 'geolocation' }).then(function(result) {
-    if (result.state == 'granted') {
-      if (confirm) {
-
-        navigator.geolocation.getCurrentPosition(getUserLocation, showError);
-      }
-    } else if (result.state === 'prompt') {
-      // Trigger the real location prompt
-      navigator.geolocation.getCurrentPosition(getUserLocation, showError);
-    } else {
-      document.getElementById("locationOutput").textContent = "Location permission is currently blocked. Please reset it in your browser settings.";
-    }
-  });
-}
-
-})
     function getUserLocation(position) {
 
             let userLat = position.coords.latitude;
@@ -195,7 +181,7 @@ function showError(error){
 
     document.getElementById("learnModels").addEventListener("click", function () {
       getModels()
-    })
+    });
 
     function getModels(){
         window.location.href = '/models';
