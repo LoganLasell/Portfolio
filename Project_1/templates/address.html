@@ -164,6 +164,9 @@
         popupAnchor: [0, -32]
       });
 
+      // DO THIS!!! function to show bus information on hover over the icon
+      
+
       // Add OpenStreetMap tiles
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
@@ -308,10 +311,11 @@
         }).then(res => res.json())
           .then(data => console.log('Saved to backend:', data))
           .catch(err => console.error('POST failed:', err));
-
         // Update dropdown immediately
         updateSavedDropdown();
+        setTimeout(function() { alert('Address Saved to Your List'); }, 5);
     }
+      // delete specific address func
         function deleteAddress(lat, lng) {
         let saved = JSON.parse(localStorage.getItem('savedAddresses')) || [];
 
@@ -331,7 +335,7 @@
         updateSavedDropdown();
       }
 
-
+      // clear all addresses func
       document.getElementById('clearAllBtn').addEventListener('click', () => {
         if (confirm('Are you sure you want to delete all saved addresses?')) {
           localStorage.removeItem('savedAddresses');

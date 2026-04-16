@@ -6,6 +6,12 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* landing page font color */
+.mb-4-display-4{
+    color: black;
+}
+
+
 
 /* Adjust the dropdown width */
 #busStopSelect {
@@ -115,11 +121,6 @@ header{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px;
     padding: 10px;
-}
-
-#landingClock{
-    background-color: black;
-    border-radius: 10px
 }
 
 #clock{
