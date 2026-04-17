@@ -1,7 +1,9 @@
 # Running TheBus Website! 🚌
 Quinn McHenry, Logan Lasell, Ashley Holen
 
-### *Repository is upkept and being continuously enhanced by Logan Lasell*
+### Repository is upkept and being continuously enhanced by Logan Lasell
+
+#### *Certain functions may be broken as I am working on implementing new features*
 <img src = "the_bus2.png" alt = 'bus' />
 
 
