@@ -39,7 +39,7 @@ Built for research, reproducibility, and public impact.
 > See [data/README.md](data/README.md) for full metadata and access instructions.
 
 ---
-#### *Dev note: I'm currently working on improving the model accuracy and changing it's prediction behavior to predict cell cytotoxicity. Certain cells may throw errors*
+#### *Dev note: I'm currently working on improving the model accuracy and changing it's prediction behavior to predict cell cytotoxicity. Certain Jupyter cells may throw errors*
 
 
 
