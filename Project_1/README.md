@@ -4,7 +4,7 @@ Quinn McHenry, Logan Lasell, Ashley Holen
 ### Repository is upkept and being continuously enhanced by Logan Lasell
 
 #### *Dev note: Certain functions may be broken as I am working on implementing new features*
-#### *Dev note: New version is running on Green Unicorn as the WSGI*
+#### *Dev note: New version is running on Gunicorn as the WSGI*
 <img src = "the_bus2.png" alt = 'bus' />
 
 
