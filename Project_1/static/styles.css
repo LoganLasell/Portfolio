@@ -123,6 +123,12 @@ header{
     padding: 10px;
 }
 
+
+/*INDEX.HTML*/
+
+/* landing page clock*/
 #clock{
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
+    padding-top: 15px;
+    padding-bottom: 30px;
 }

@@ -16,10 +16,17 @@
 
 
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Lato", sans-serif;
+}
+.w3-bar,button {
+  font-family: "Montserrat", sans-serif;
+}
+.fa-anchor,.fa-coffee {
+  font-size:200px;
+}
 </style>
+
 </head>
 <body>
 
@@ -32,6 +39,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="http://127.0.0.1:5000/models" class="w3-bar-item w3-button w3-padding-large w3-white">Features</a>
     <a href="http://127.0.0.1:5000/about" class="w3-bar-item w3-button w3-padding-large w3-white">About</a>
     <a href="http://127.0.0.1:5000/contact" class="w3-bar-item w3-button w3-padding-large w3-white">Contact Us</a>
+    <div class="w3-bar-item w3-padding-large w3-white">...</div>
   </div>
 
   <!-- Navbar on small screens -->
@@ -41,7 +49,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="text-center text-white" style="background-image: url('static/new-background.jpg'); padding-top: 100px; padding-bottom: 100px; background-size: cover; background-position: center;">
   <h1 class="mb-4-display-4">Welcome to The Bus</h1>
-  <button id="getLocationBtn" class="btn btn-dark btn-lg mt-3" onclick="getUserLocation()">Find My Bus</button>
 
   <!-- Digital Clock Embed -->
   <div class="mt-4" id="landingClock">
@@ -49,6 +56,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     
     </div>
   </div>
+
+  <button id="getLocationBtn" class="btn btn-dark btn-lg mt-3" onclick="getUserLocation()">Find My Bus</button>
+
+  
 </header>
 
 
